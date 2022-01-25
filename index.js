@@ -6,6 +6,9 @@ http.createServer(function (request, response) {
 	
 	response.end('Hello World\n');
 
-}).listen(8080);
+}).listen(3000);
 
-console.log('Server running at http://127.0.0.1:8080/'); 
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+	console.log('The app is runiing on port ${ PORT }');
+	
